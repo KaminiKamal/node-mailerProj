@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang=en>
+<title>Example of DataTransfer.setDragImage()</title>
+
+<style>
+  div {
+    
+    padding: 10px;
+  }
+  #source , #source1,#source2,#source3,#source4,#source5,#source6,#source7,#source8,#source9,#source9,#source10,#source11,#source12,#source12
+  ,#source13,#source14,#source15,#source16,#source17,#source18,#source19{
+  
+  background:#ff3333;
+   margin:10px 10px 10px 10px;
+  width:70px;
+  border-radius:10px;
+  border:5px solid black;
+  
+  display:block;
+  float:right;
+	height:10x;
+   
+  }
+  #target, #target1 {
+  margin:10px 10px 10px 10px;
+  width:100px;
+  border-radius:10px;
+  border:5px solid black;
+  background:#66ccff;
+  display:block;
+  float:right;
+	height:20x;
+   
+  }
+</style>
+<script>
+function dragstart_handler(ev) {
+ console.log("dragStart");
+ // Set the drag's format and data. Use the event target's id for the data 
+ ev.dataTransfer.setData("text/plain", ev.target.id);
+ // Create an image and use it for the drag image
+ // NOTE: change "example.gif" to an existing image or the image will not
+ // be created and the default drag image will be used.
+ var img = new Image(); 
+ img.src = 'example.gif'; 
+ ev.dataTransfer.setDragImage(img, 10, 10);
+}
+
+function dragover_handler(ev) {
+ console.log("dragOver");
+ ev.preventDefault();
+}
+
+function drop_handler(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ if(data=="source")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler1(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source1")
+ ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script>
+function drop_handler2(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source2")
+ ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script>
+function drop_handler3(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source3")
+ ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script>
+function drop_handler4(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source4")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler5(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source5")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler6(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source6")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler7(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source7")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler8(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source8")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler9(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source9")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler10(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source10")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler11(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source11")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler12(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source12")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler13(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source13")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler14(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source14")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler15(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source15")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler16(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source16")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler17(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source17")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+function drop_handler18(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source18")
+ ev.target.appendChild(document.getElementById(data));
+}</script>
+<script>
+ function drop_handler19(ev) {
+ console.log("Drop");
+ ev.preventDefault();
+ // Get the data, which is the id of the drop target
+ var data = ev.dataTransfer.getData("text");
+ //var d=document.getElementById("target1").innerHTML.value;
+ //alert(d);
+ if(data=="source19")
+ ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<body>
+<h1><p>Drag and drop the correct options<p></h1>
+<div style="margin-left:200px;width:100px;float:left">
+<div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);" >sentence 1</div>
+ <div id="target1" ondrop="drop_handler1(event);" ondragover="dragover_handler(event);">sentence 2</div>
+ <div id="target" ondrop="drop_handler2(event);" ondragover="dragover_handler(event);">sentence 3</div>
+ <div id="target1" ondrop="drop_handler3(event);" ondragover="dragover_handler(event);">sentence 4</div>
+ <div id="target" ondrop="drop_handler4(event);" ondragover="dragover_handler(event);">sentence 5</div>
+ <div id="target1" ondrop="drop_handler5(event);" ondragover="dragover_handler(event);">sentence 6</div>
+ <div id="target" ondrop="drop_handler6(event);" ondragover="dragover_handler(event);">sentence 7</div>
+ <div id="target1" ondrop="drop_handler7(event);" ondragover="dragover_handler(event);">sentence 8</div>
+ <div id="target" ondrop="drop_handler8(event);" ondragover="dragover_handler(event);">sentence 9</div>
+ <div id="target1" ondrop="drop_handler9(event);" ondragover="dragover_handler(event);">sentence 10</div>
+ <div id="target" ondrop="drop_handler10(event);" ondragover="dragover_handler(event);">sentence 11</div>
+ 
+ <div id="target1" ondrop="drop_handler11(event);" ondragover="dragover_handler(event);">sentence 12</div>
+ <div id="target" ondrop="drop_handler12(event);" ondragover="dragover_handler(event);">sentence 13</div>
+ <div id="target1" ondrop="drop_handler13(event);" ondragover="dragover_handler(event);">sentence 14</div>
+ <div id="target" ondrop="drop_handler14(event);" ondragover="dragover_handler(event);">sentence 15</div>
+ <div id="target1" ondrop="drop_handler15(event);" ondragover="dragover_handler(event);">sentence 16</div>
+ <div id="target" ondrop="drop_handler16(event);" ondragover="dragover_handler(event);">sentence 17</div>
+ <div id="target1" ondrop="drop_handler17(event);" ondragover="dragover_handler(event);">sentence 18</div>
+ <div id="target" ondrop="drop_handler18(event);" ondragover="dragover_handler(event);">sentence 19</div>
+ <div id="target1" ondrop="drop_handler19(event);" ondragover="dragover_handler(event);">sentence 20</div>
+ </div>
+ <div style="margin-bottom:50px;width:100px;float:right;margin-right:200px">
+ 
+ <div  id="source6" ondragstart="dragstart_handler(event);" draggable="true">answer7</div>
+ <div id="source7" ondragstart="dragstart_handler(event);" draggable="true">answer8</div>
+ <div  id="source8" ondragstart="dragstart_handler(event);" draggable="true">answer9</div>
+ <div id="source9" ondragstart="dragstart_handler(event);" draggable="true">answer10</div>
+ <div  id="source10" ondragstart="dragstart_handler(event);" draggable="true">answer11</div>
+ <div id="source" ondragstart="dragstart_handler(event);" draggable="true">answer1</div>
+ <div  id="source1" ondragstart="dragstart_handler(event);" draggable="true">answer2</div>
+ <div id="source3" ondragstart="dragstart_handler(event);" draggable="true">answer4</div>
+ 
+ <div  id="source14" ondragstart="dragstart_handler(event);" draggable="true">answer15</div>
+ <div id="source15" ondragstart="dragstart_handler(event);" draggable="true">answer16</div>
+ <div  id="source16" ondragstart="dragstart_handler(event);" draggable="true">answer17</div>
+ <div  id="source4" ondragstart="dragstart_handler(event);" draggable="true">answer5</div>
+ <div id="source5" ondragstart="dragstart_handler(event);" draggable="true">answer6</div>
+ <div id="source11" ondragstart="dragstart_handler(event);" draggable="true">answer12</div>
+ <div  id="source12" ondragstart="dragstart_handler(event);" draggable="true">answer13</div>
+ <div id="source13" ondragstart="dragstart_handler(event);" draggable="true">answer14</div>
+ <div id="source17" ondragstart="dragstart_handler(event);" draggable="true">answer18</div>
+ <div  id="source18" ondragstart="dragstart_handler(event);" draggable="true">answer19</div>
+ <div id="source19" ondragstart="dragstart_handler(event);" draggable="true">answer20</div>
+ <div  id="source2" ondragstart="dragstart_handler(event);" draggable="true">answer2</div></div>
+ </div>
+ 
+</body>
+</html>

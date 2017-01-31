@@ -1,0 +1,310 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="grammar_database/exercises/mcq.js"></script>
+<script src="grammar_database/exercises/match_ques.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheet/header.css">
+<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div id="main_wrap">
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close"><i class="material-icons" style="font-size:36px">highlight_off</i></span>
+    <p style="padding:20px">Your answer is correct!!!</p>
+  </div>
+</div>
+
+<div style="position:fixed;">
+
+</div>
+<div class="header">
+<div id="logo" >
+<img src="images/Logo base II.png" id="img1" alternat="logo"/>
+</div>
+<div id="name_c">
+<h1>CREAMSON INTELLIACADEMY </h1>
+<h2>NEXT GENERATION EDUCATION </h2>
+</div>
+</div>
+<div style="position:fixed;margin:0px;width:100%;height:auto;">
+<ul>
+<li class="dropdown">
+    <a href="../../reading.html" class="dropbtn" >Reading</a>
+    <div class="dropdown-content">
+      <a href="../../subskills.html">Subskills</a>
+      <a href="../../prose.html">Prose</a>
+      <a href="../../poetry.html">Poetry</a>
+    </div>
+  </li>
+<li class="dropdown">
+    <a href="../../listening_home.html" class="dropbtn">Listening</a>
+  <li class="dropdown">
+    <a href="../../speaking_home.html" class="dropbtn">Speaking</a>
+    
+  </li>
+<li class="dropdown">
+    <a href="../../writing_home.html" class="dropbtn" >Writing</a>
+    
+  </li>
+<li class="dropdown">
+    <a href="../../grammar_home.html" class="dropbtn" id="current">Grammar</a>
+    
+  </li>
+<li class="dropdown">
+    <a href="../../vocabulary_home.html" class="dropbtn">Vocabulary</a>
+    
+  </li>
+<li class="dropdown">
+    <a href="../../assessment.html" class="dropbtn">Assessment</a>
+    
+  </li>
+</ul>
+<div style="text-align:left;">
+<div style="width:470px;margin:5px;height:50px;margin-left:350px;font-size:20px;font-weight:bold;color:green;padding:5px;">
+<span><a href="../../grammar_home.html" style="text-decoration:none">Grammar</a></span> <i class="fa fa-toggle-right"></i>
+<a href="sentence_structure.html" style="text-decoration:none">Noun</a></span> <i class="fa fa-toggle-right"></i>
+<span><a href="exercise.html" style="text-decoration:none">Exercise</a></span>
+</div>
+</div>
+</div>
+
+<div class="wrapper">
+
+<table class="nano">
+  <tr><td><a href="demo.html" id="app">Demo</a></td></tr>
+  <tr><td><a href="exercise.html" id="app">Exercises</a></td></tr>
+  <tr><td><a href="special.html" id="app">Special Notes</a></td></tr>
+  <tr><td><a href="assessment.html" id="app">Assessments</a></td></tr>
+          
+  
+</table>
+
+<div style="margin-top:20px;margin-left:30%;padding:1px 16px;height:1000px;">
+
+<div><h1>Tick the correct option</h1>
+<div id="id0A"></div></div>
+<div><h1>Match the following</h1>
+<table><tr> <td id="id01" style=""></td><td id="id02" style=""></td></tr><tr><td id="id03" style="padding-left:400px;background:black;display:none" >qqq</td>
+<td id="id04" style="display:none"></td>
+</tr></table></div></div>
+<h4>1) Fill in the blanks with appropriate works from the lessons: 
+
+</h4>
+
+<div id="a01"></div>
+
+
+
+
+<SCRIPT>
+var myarray = [{
+"parta" : "The scene of Mukna Kangjei was reflected ",
+"partb" : "on the clear water of the Lake Loktek",
+"answer" : "answer0"
+},
+{
+"parta" : "The scene of Mukna Kangjei was reflected ",
+"partb" : "on the clear water of the Lake Loktek",
+"answer" : "answer1"
+},
+{
+"parta" : "The scene of Mukna Kangjei was reflected ",
+"partb" : "on the clear water of the Lake Loktek",
+"answer" : "answer2"
+}
+];
+displayData(myarray);
+function displayData(arr){
+var out="";
+for(var i=0;i<arr.length;i++){
+out+=" " + (i+1) + ". " + arr[i].parta +  "<span id='ans"+i+"'  style='color:green;display:none'>" + arr[i].answer + "</span><input type='text' id='user-data"+i+"' /> "+arr[i].partb +"<button type='button' id='btn"+i+"' onclick='check("+i+")'>TRY</button><button type='button' id='btn1"+i+"' onclick='disclose("+i+")'>SHOW</button><br><br>";
+}
+document.getElementById("a01").innerHTML=out;
+}
+function check(i){
+//alert("hi");
+var a = "user-data"+i;
+var b = "ans"+i;
+//alert(a);
+var d = document.getElementById(a).value.trim().toLowerCase();
+var c = document.getElementById(b).innerHTML;
+alert(c);
+if(c==d){
+alert("yes");
+}
+else{
+alert("No");
+ }
+}
+function disclose(i){
+var b = "ans"+i;
+document.getElementById(b).style.display="inline";
+
+}
+</script>
+</div>
+<div class="footer"> &copyright-2016..xyz </div>
+</div>
+</body></html>
+<script>
+var global=false;
+          myFunction(myArray1);
+
+function myFunction(arr) {
+    var out = "";
+var match="";var match1="";
+    var i, j;
+    for(i = 0; i < arr.length; i++) {
+var j=i;
+
+ out+='<form><table><tr><td id="mytd">'+arr[i].number+". "+arr[i].question+'<input type="radio"        id="d'+i+'" value="'+arr[i].number+'"></input></tr></td></table>';
+
+ }
+ for(i=0;i<(arr.length);i=i+2){
+ match+=
+'<table><tr><td id="mytd"><span id="l'+i+'"><input type="radio"  class="myradio"   onclick="myfunc('+i+')"     id="b'+i+'" value="'+arr[i].number+'"></input></span><span id="j'+i+'">'+arr[i].answer+'</span><span id="memo'+i+'"></span></td></tr></table></form>';
+   }
+   for(i=1;i<(arr.length);i=i+2){
+ match+=
+'<table><tr><td id="mytd"><span id="l'+i+'"><input type="radio"  class="myradio"   onclick="myfunc('+i+')"      id="b'+i+'" value="'+arr[i].number+'"></input></span><span id="j'+i+'">'+arr[i].answer+'</span><span id="memo'+i+'"></span></td></tr></table></form>';
+   }
+ //var x=document.getElementById("id01").value;
+ //alert(x);
+document.getElementById("id01").innerHTML = out;
+document.getElementById("id02").innerHTML = match;
+document.getElementById("id03").innerHTML = match;
+}
+
+
+function changecolor(i){
+var c="l"+i;
+var g="j"+i;
+document.getElementById(g).style.color="green";
+document.getElementById(c).style.display="none";
+
+}
+
+function myfunc(i){
+var modal = document.getElementById('myModal');
+var count=i;
+var reset=1;
+//alert(reset);
+var a="d"+count;
+var b="b"+count;
+var m="memo"+count;
+var req;
+req=document.getElementById(a).value; 
+var res;
+
+
+res=document.getElementById(b).value; 
+//if(document.getElementById(m).value==1){alert("no");}
+if((document.getElementById(a).checked==true) && (reset==1)){
+
+modal.style.display = "block";
+changecolor(i);
+
+ document.getElementById(a).checked=true;
+var t=document.getElementById(a).value;
+document.getElementById(m).innerHTML=" || Ans: "+t;
+
+return;
+}
+
+if(res==req){
+
+document.getElementById(a).checked=false;
+document.getElementById(b).checked=false;
+var g=document.getElementById(a).value; 
+alert("This is not the correct answer");
+
+} 
+else{
+
+alert("This is not the correct answer");
+var c="j"+i;
+$("#c").addClass("myradio:after");
+}
+
+}
+
+
+function validate(id,i){
+var modal = document.getElementById('myModal');
+var a="hidden_ans"+i;
+var d="demo"+i;
+//document.getElementById(id).checked=false;
+//document.getElementById()
+var req=document.getElementById(id).value;
+var res=document.getElementById(a).value;
+
+if(req!=res){
+document.getElementById(id).checked=false;
+
+//document.getElementById(id).style.background="red";
+<!--displaying the message  if response is incorrect -->
+alert('wrong');
+//document.getElementById(a).checked=false;
+ }
+
+
+if(req==res){
+modal.style.display = "block";
+document.getElementById(id).checked=true;
+//alert('done');
+var x = document.getElementById(a).value;
+    document.getElementById(d).innerHTML = "The correct answer is:"+x;
+
+//document.getElementById(a).style.display="block";
+//document.getElementById(a).checked=true;
+}
+
+
+ 
+}
+
+
+myFunction2(myArray);
+
+function myFunction2(arr) {
+    var out = "";
+var a="A. ", b="B. ", c="C. ";
+
+    var i;
+    for(i = 0; i < arr.length; i++) {
+var ans;
+ans=arr[i].answer;
+out+='<table><tr><td id="abc">'+(i+1)+". "+arr[i].question+'</tr></td></table>'+
+'<table><tr><td class="td-option" id="abc"><input type="button"  onclick="validate(id,'+i+')"   class="mybutton" id="b1" value="A"></input>'+arr[i].option1+'</td></tr>'+
+'<table><tr><td class="td-option" id="abc"><input  type="button" onclick="validate(id,'+i+')"  class="mybutton" id="b2" value="B"></input>'+arr[i].option2+'</tr></td>'+
+'<table><tr><td class="td-option" id="abc"><input type="button" onclick="validate(id,'+i+')" class="mybutton" id="b3" value="C"></button>'+arr[i].option3+'</tr></td></table>'+
+'<input type="hidden"  id="hidden_ans'+i+'" value='+ans+'></input><p id="demo'+i+'" class="xyz"></p><br><br><hr>';
+        
+    }
+    document.getElementById("id0A").innerHTML = out;
+}
+
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+

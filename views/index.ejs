@@ -14,7 +14,8 @@
     <input type="text" id="usermail" /><br><br>
      <input type="text" id="topic" /><br><br>
     <textarea id="description"> </textarea>
-    <button type="button" id="btn">mail</button>
+    <input type="file" id="fname" />
+    <button type="button" id="btn1">mail</button>
 
   </body>
 </html>
@@ -30,6 +31,23 @@ $(document).ready(function() {
       	$.ajax({
         type:"POST",
         url:"/mymail",
+        data :  data, 
+        //dataType: 'json',  // multiple data sent using ajax
+        success: function (result) {
+           alert(result);
+          
+        }
+        });
+    });
+    $('#btn1').click(function () {
+      var data={
+        
+        'filename' : $("#fname").val()
+                    };
+      console.log(data);
+        $.ajax({
+        type:"POST",
+        url:"/profile",
         data :  data, 
         //dataType: 'json',  // multiple data sent using ajax
         success: function (result) {

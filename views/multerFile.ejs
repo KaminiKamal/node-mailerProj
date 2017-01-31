@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1></h1>
+    <p></p>
+    <form type="enctype">
+    <input type="file" id="userfile" /><br><br>
+    <button type="button" id="btn1">mail</button>
+</form>
+  </body>
+</html>
+<script>
+$(document).ready(function() {
+   
+    $('#btn1').click(function () {
+      var formData = new FormData();
+      //formData.append("avatar", $("#input-field")[0].files[0]);
+    //  formData.append('image', $('input[type=file]')[0].files[0]); 
+    formData.append('image', $('#userfile')[0].files[0], 'avatar'); 
+     
+        $.ajax({
+        type:"POST",
+        url:"/upload",
+        data :  formData,
+        contentType : false,
+        processData : false,
+       
+        success: function (result) {
+          // alert(result.name);
+          
+        }
+        });
+    });
+});
+</script>
+
